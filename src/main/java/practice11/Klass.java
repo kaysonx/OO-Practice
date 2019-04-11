@@ -32,7 +32,7 @@ public class Klass {
     }
 
     boolean isIn(Student student) {
-        return student.getKlass().number == number;
+        return student.getKlass().getNumber() == number;
     }
 
     private void notifyAllObservers(ClassChangeNotifyEvent event) {
