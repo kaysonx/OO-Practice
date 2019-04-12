@@ -63,7 +63,7 @@ public class Practice12Test {
         Klass klass = new Klass(1);
 
         Student jerry = new Student(1, "Jerry", 8, klass);
-        Student mark = new Student(1, "Mark", 18, klass);
+        Student mark = new Student(2, "Mark", 18, klass);
 
         klass.appendMember(jerry);
         klass.appendMember(mark);
@@ -80,7 +80,7 @@ public class Practice12Test {
 
 
         Student jerry = new Student(1, "Jerry", 8, klass2);
-        Student mark = new Student(1, "Mark", 18, klass);
+        Student mark = new Student(2, "Mark", 18, klass);
 
         klass2.appendMember(jerry);
         klass.appendMember(mark);
