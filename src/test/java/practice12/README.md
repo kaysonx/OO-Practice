@@ -16,6 +16,8 @@ Assistant还有一个getClassesLeader方法，调用此方法会打印一句话�
 该班级的其他同学打印一句话，形如：
 >My name is Tom. I am 21 years old. I am a Student. I know that Tom has become the Leader of Class 1.
 
+Note: 任何改动后请确保所有测试都通过
+
 
          
               

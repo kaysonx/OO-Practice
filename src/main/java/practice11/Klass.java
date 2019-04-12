@@ -17,7 +17,7 @@ public class Klass {
         this.number = number;
     }
 
-    void assignLeader(Student student) {
+    public void assignLeader(Student student) {
         if (!students.contains(student)) {
             System.out.println("It is not one of us.");
             return;
@@ -26,7 +26,7 @@ public class Klass {
         notifyAllObservers(new ClassChangeNotifyEvent(student, this, EventEnum.BECOME_LEADER));
     }
 
-    void appendMember(Student student) {
+    public void appendMember(Student student) {
         students.add(student);
         notifyAllObservers(new ClassChangeNotifyEvent(student, this, EventEnum.JOIN_CLASS));
     }
