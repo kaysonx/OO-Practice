@@ -9,7 +9,7 @@ Assistant还有一个getClassesLeader方法，调用此方法会打印一句话�
 
 
 
-在本codebase的基础上，当一个Student成为一个Class的Leader后(即assignLeader被调用)，该班级的所有学生会收到提醒。
+在本codebase的基础上，当一个Student成为自己Class的Leader后(即assignLeader被调用)，该班级的所有学生会收到提醒。
 被assign成leader的学生打印一句话，形如：
 >My name is Tom. I am 21 years old. I am a Student. I've become the Leader of Class 1.
 
