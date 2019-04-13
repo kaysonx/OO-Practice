@@ -10,9 +10,13 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
-        return basicIntroduce() + (isLeader()
-                        ? (" I am Leader of " + klass.getDisplayName() + ".")
-                        : (" I am at " + klass.getDisplayName() + "."));
+        return basicIntroduce() + getLeaderInfo();
+    }
+
+    private String getLeaderInfo() {
+        return isLeader()
+                ? (" I am Leader of " + klass.getDisplayName() + ".")
+                : (" I am at " + klass.getDisplayName() + ".");
     }
 
     private boolean isLeader() {

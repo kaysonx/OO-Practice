@@ -23,12 +23,15 @@ public class Teacher extends Person implements ClassChangeListener {
 
     @Override
     public String introduce() {
-        return classes.isEmpty() ? teachWith("No Class")
+        return classes.isEmpty()
+                ? teachWith("No Class")
                 : teachWith("Class " + getClassesString());
     }
 
     public String introduceWith(Student student) {
-        return isTeaching(student) ? teachWith(student.getName()) : notTeachWith(student.getName());
+        return isTeaching(student)
+                ? teachWith(student.getName())
+                : notTeachWith(student.getName());
     }
 
     private String getClassesString() {
