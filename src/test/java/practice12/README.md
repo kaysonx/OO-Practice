@@ -8,7 +8,7 @@ Assistant还有一个getClassesLeader方法，调用此方法会打印一句话�
 >My name is Tom. I am 21 years old. I am a Assistant. I will assist these leader: Class 2: Tom, Class 3: Jerry, Class 4: No Leader now.
 
 如果classes的长度为0，就会返回：
->My name is Tom. I am 21 years old. I am a Assistant. No class leader need assist now.
+>My name is Tom. I am 21 years old. I am a Assistant. No class need assist now.
 
 
 

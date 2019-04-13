@@ -67,7 +67,7 @@ public class Practice12Test {
         klass.assignLeader(jerry);
         klass2.assignLeader(mark);
 
-        assertThat(tom.getClassesLeader()).isEqualTo("My name is Tom. I am 21 years old. I am a Assistant. No class leader need assist now.");
+        assertThat(tom.getClassesLeader()).isEqualTo(">My name is Tom. I am 21 years old. I am a Assistant. No class need assist now.");
     }
 
     @Test
