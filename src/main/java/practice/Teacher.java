@@ -23,28 +23,21 @@ public class Teacher extends Person implements ClassChangeListener {
 
     @Override
     public String introduce() {
-        return classes.isEmpty()
-                ? teachWith("No Class")
+        return classes.isEmpty() ? teachWith("No Class")
                 : teachWith("Class " + getClassesString());
     }
 
     public String introduceWith(Student student) {
-        return isTeaching(student)
-                ? teachWith(student.getName())
-                : notTeachWith(student.getName());
+        return isTeaching(student) ? teachWith(student.getName()) : notTeachWith(student.getName());
     }
 
-    protected String getClassesString() {
+    private String getClassesString() {
         return classes.stream().map(clazz ->
                 String.valueOf(clazz.getNumber())).collect(Collectors.joining(", "));
     }
 
     private String basicIntroduce() {
         return super.introduce() + " I am a Teacher.";
-    }
-
-    protected String rawIntroduce() {
-        return super.introduce();
     }
 
     private String teachWith(String name) {
