@@ -39,8 +39,8 @@ public class Klass {
         classChangeListeners.forEach(classChangeListener -> classChangeListener.notify(event));
     }
 
-    void attachObserver(Teacher teacher) {
-        classChangeListeners.add(teacher);
+    void attachObserver(ClassChangeListener classChangeListener) {
+        classChangeListeners.add(classChangeListener);
     }
 
     public Student getLeader() {
