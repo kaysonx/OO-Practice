@@ -1,4 +1,4 @@
-package practice11;
+package practice;
 
 public class Student extends Person {
     private Klass klass;

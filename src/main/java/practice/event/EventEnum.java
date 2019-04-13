@@ -1,4 +1,4 @@
-package practice11.event;
+package practice.event;
 
 public enum EventEnum {
     JOIN_CLASS,

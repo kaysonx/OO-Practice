@@ -2,9 +2,8 @@ package practice12;
 
 import org.junit.Before;
 import org.junit.Test;
-import practice11.Klass;
-import practice11.Student;
-import practice11.Teacher;
+import practice.Klass;
+import practice.Student;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -50,6 +49,25 @@ public class Practice12Test {
         klass2.assignLeader(mark);
 
         assertThat(tom.getClassesLeader()).isEqualTo("My name is Tom. I am 21 years old. I am a Assistant. I will assist these leader: Class 1: Jerry, Class 2: Mark, Class 3: No Leader now.");
+    }
+
+    @Test
+    public void should_assistant_get_no_class_leader_which_classes_it_assist_when_classes_is_empty() {
+        LinkedList<Klass> linkedList = new LinkedList<>();
+        Klass klass = new Klass(1);
+        Klass klass2 = new Klass(2);
+        Klass klass3 = new Klass(3);
+        linkedList.add(klass);
+        linkedList.add(klass2);
+        linkedList.add(klass3);
+        Assistant tom = new Assistant(1, "Tom", 21);
+        Student jerry = new Student(1, "Jerry", 8, klass);
+        Student mark = new Student(2, "Mark", 18, klass2);
+
+        klass.assignLeader(jerry);
+        klass2.assignLeader(mark);
+
+        assertThat(tom.getClassesLeader()).isEqualTo("My name is Tom. I am 21 years old. I am a Assistant. No class leader need assist now.");
     }
 
     @Test

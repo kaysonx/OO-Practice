@@ -1,7 +1,7 @@
-package practice11.event;
+package practice.event;
 
-import practice11.Klass;
-import practice11.Student;
+import practice.Klass;
+import practice.Student;
 
 public class ClassChangeNotifyEvent {
     private Student student;

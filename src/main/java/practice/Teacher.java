@@ -1,7 +1,7 @@
-package practice11;
+package practice;
 
-import practice11.event.ClassChangeListener;
-import practice11.event.ClassChangeNotifyEvent;
+import practice.event.ClassChangeListener;
+import practice.event.ClassChangeNotifyEvent;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -48,7 +48,7 @@ public class Teacher extends Person implements ClassChangeListener {
         return basicIntroduce() + " I don't teach " + name + ".";
     }
 
-    boolean isTeaching(Student student) {
+    public boolean isTeaching(Student student) {
         return classes.stream().anyMatch(classes ->
                 classes.isIn(student)
         );
@@ -72,7 +72,7 @@ public class Teacher extends Person implements ClassChangeListener {
         }
     }
 
-    List<Klass> getClasses() {
+    public List<Klass> getClasses() {
         return classes;
     }
 }

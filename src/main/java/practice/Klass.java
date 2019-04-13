@@ -1,8 +1,8 @@
-package practice11;
+package practice;
 
-import practice11.event.ClassChangeListener;
-import practice11.event.ClassChangeNotifyEvent;
-import practice11.event.EventEnum;
+import practice.event.ClassChangeListener;
+import practice.event.ClassChangeNotifyEvent;
+import practice.event.EventEnum;
 
 import java.util.ArrayList;
 import java.util.List;

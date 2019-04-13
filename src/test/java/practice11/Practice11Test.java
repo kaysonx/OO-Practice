@@ -2,6 +2,10 @@ package practice11;
 
 import org.junit.Before;
 import org.junit.Test;
+import practice.Klass;
+import practice.Person;
+import practice.Student;
+import practice.Teacher;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -96,7 +100,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_have_name_and_age_and_classes() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         linkedList.add(klass2);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
         assertThat(tom.getName()).isEqualTo("Tom");
@@ -107,7 +111,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_introduce_itself_with_which_classes_it_teaches() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         Klass klass3 = new Klass(3);
         linkedList.add(klass2);
         linkedList.add(klass3);
@@ -123,7 +127,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_isTeaching_return_true_when_the_student_is_in_any_classes_the_teacher_teaches() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         Klass klass3 = new Klass(3);
         linkedList.add(klass2);
         linkedList.add(klass3);
@@ -135,7 +139,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_isTeaching_return_false_when_the_student_is_not_in_all_the_classes_the_teacher_teaches() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         linkedList.add(klass2);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
         Student jerry = new Student(1, "Jerry", 8, new Klass(3));
@@ -145,7 +149,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_introduce_a_student_it_teaches() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         linkedList.add(klass2);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
         Student jerry = new Student(1, "Jerry", 8, klass2);
@@ -154,7 +158,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_introduce_a_student_it_does_not_teach() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         Klass klass1 = new Klass(1);
         linkedList.add(klass1);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
@@ -164,7 +168,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_be_notified_when_student_join_any_classes_it_teaches() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         linkedList.add(klass2);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
         Student jerry = new Student(1, "Jerry", 8, new Klass(3));
@@ -176,7 +180,7 @@ public class Practice11Test {
 
     @Test
     public void should_teacher_be_notified_when_any_class_it_teaches_assigned_a_leader() throws Exception {
-        LinkedList<practice11.Klass> linkedList = new LinkedList<Klass>();
+        LinkedList<Klass> linkedList = new LinkedList<Klass>();
         linkedList.add(klass2);
         Teacher tom = new Teacher(1, "Tom", 21, linkedList);
         Student jerry = new Student(1, "Jerry", 8, new Klass(3));
